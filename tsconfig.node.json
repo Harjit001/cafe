@@ -4,19 +4,22 @@
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
-
-    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
-
-    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "composite": true  // Added for project references
   },
-  "include": ["vite.config.ts"]
+  "include": [
+    "vite.config.ts",
+    "server.ts",  // Added to include server file
+    "src/lib/db.ts"  // Added to include database configuration
+  ]
 }
